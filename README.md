@@ -1,4 +1,4 @@
-# Tugas Integrasi Sistem #
+# Simple Apps with React Native #
 Membuat aplikasi mobile menggunakan React Native untuk mengambil dan mengirim data
 
 ### Fitur ###
@@ -6,10 +6,10 @@ Membuat aplikasi mobile menggunakan React Native untuk mengambil dan mengirim da
 * Post Data
 
 
-Created by:
+Thanks by:
 * Aufa Billah
 * Muhammad Aslam Pangestu
 * Muhammad Abdul Karim
 
 
-link [ Web Service ] ( https://github.com/AslamPangestu/webservice-demo )
+Web Service => https://github.com/AslamPangestu/webservice-demo
