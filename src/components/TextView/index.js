@@ -1,9 +1,9 @@
 import React from 'react';
 import { Text } from 'react-native';
-import Style from '../../assets/styles';
+import Styles from '../../assets/styles';
 
 const TextView = props =>(
-    <Text style={Style.textViewStyle}>
+    <Text style={props.style}>
         {props.children}
     </Text>
 )

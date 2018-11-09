@@ -1,21 +1,14 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { View } from 'react-native';
+import Styles from '../assets/styles';
+import Text from '../components/TextView';
 
 export default class Input extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Ini menu input</Text>
-      </View>
-    );
-  }
+    render() {
+        return (
+          <View style={Styles.container}>
+              <Text>Ini menu input</Text>
+          </View>
+        );
+    }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

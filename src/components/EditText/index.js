@@ -1,10 +1,10 @@
 import React from 'react';
 import { TextInput } from 'react-native';
-import Style from '../../assets/styles'
+import Styles from '../../assets/styles'
 
 const EditText = props =>(
     <TextInput
-        style={Style.editTextStyle}
+        style={Styles.editTextStyle}
         name={props.name}
         underlineColorAndroid="transparent"
         onChangeText={props.onChangeText}
