@@ -1,11 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Main from './src/containers/Main';
 
-export default class App extends React.Component {
+export default class Input extends React.Component {
   render() {
     return (
-      <Main />
+      <View style={styles.container}>
+        <Text>Ini menu input</Text>
+      </View>
     );
   }
 }
