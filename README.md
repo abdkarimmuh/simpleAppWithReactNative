@@ -1,15 +1,15 @@
-#Tugas Integrasi Sistem#
+# Tugas Integrasi Sistem #
 Membuat aplikasi mobile menggunakan React Native untuk mengambil dan mengirim data
 
-###Fitur###
+### Fitur ###
 * Get Data
 * Post Data
 
 
-created by:
+Created by:
 * Aufa Billah
 * Muhammad Aslam Pangestu
 * Muhammad Abdul Karim
 
 
-link [Web Service] (https://github.com/AslamPangestu/webservice-demo)
+link [ Web Service ] ( https://github.com/AslamPangestu/webservice-demo )
