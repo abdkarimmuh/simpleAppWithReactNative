@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, ScrollView, StyleSheet, AsyncStorage } from 'react-native';
+import { View, ScrollView, AsyncStorage } from 'react-native';
 import Styles from '../assets/styles';
 import Text from '../components/TextView';
 import { Card } from 'react-native-elements';
@@ -16,15 +16,15 @@ export default class List extends React.Component {
     }
 
     componentDidMount(){
-        // this.getData();
-        this.getDataMock();
+        this.getData();
+        // this.getDataMock();
     }
 
     getData = async() => {
         Api.create()
         .getData()
         .then(res => {
-            this.setState({ data: res.data })
+            this.setState({ data: res.data.data })
         })
         .catch(err => {
             console.log('ERR', err)
@@ -32,14 +32,14 @@ export default class List extends React.Component {
                 error: true
             })
         })
-      }
+    }
 
 
     getDataMock(){
         Mock.create()
         .getData()
         .then(res => {
-            this.setState({ data: res.data})
+            this.setState({ data: res.data })
         })
         .catch(err => {
             console.log('ERR', err)
@@ -51,51 +51,28 @@ export default class List extends React.Component {
 
     render() {
         const { data } = this.state;
+        this.componentDidMount();
         return (
-            <ScrollView style = {{ paddingTop: 32 }}>
+            <ScrollView style = {{ paddingTop: 16 }}>
                 <View style = { Styles.container }>
                     {
                         data.map((d, index) => (
-                            <View style = { styles.contentContainer }
+                            <View style = { Styles.contentContainer }
                                 key = { index }>
-                                <View style = { styles.contentLeft }>
-                                    <Text style = { styles.textTitle }> Nama Barang </Text>
-                                    <Text style = { styles.textContent }> { d.nama_barang } </Text>
+                                <View style = { Styles.contentLeft }>
+                                    <Text style = { Styles.textTitle }> Nama Barang </Text>
+                                    <Text style = { Styles.textContent }> { d.nama_barang } </Text>
                                 </View>
-                                <View style = { styles.contentRight }>
-                                    <Text style = { styles.textTitle }> Jumlah </Text>
-                                    <Text style = { styles.textContent }> { d.jumlah } </Text>
+                                <View style = { Styles.contentRight }>
+                                    <Text style = { Styles.textTitle }> Jumlah </Text>
+                                    <Text style = { Styles.textContent }> { d.jumlah } </Text>
                                 </View>
                             </View>
                         ))
                     }
                 </View>
+                <View style = {{width: '100%', height: 64}}></View>
             </ScrollView>
         );
     }
 }
-
-const styles = StyleSheet.create({
-    contentContainer: {
-        width: '100%',
-        margin: 16,
-        flexDirection: 'row',
-        justifyContent: 'space-between'
-    },
-    contentRight: {
-        marginRight: 16,
-        flexDirection: 'column',
-        alignItems: 'flex-end'
-    },
-    contentLeft: {
-        marginLeft: 16,
-        flexDirection: 'column'
-    },
-    textTitle: {
-        fontSize: 16,
-    },
-    textContent: {
-        fontSize: 18,
-        fontWeight: 'bold',
-    },
-})
